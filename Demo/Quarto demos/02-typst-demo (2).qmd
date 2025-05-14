@@ -1,0 +1,34 @@
+---
+title: "02-demo-typst"
+format:
+  typst:
+    toc: true
+#    section-numbering: true
+    embed-resources: true
+lang: fr
+---
+
+
+# Introduction
+
+Ce PDF est rendu grâce au moteur **Typst**. Le rendu est *extrêmement rapide* comparé à LaTeX tout en conservant le support des équations :
+
+$$
+\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}
+$$
+
+# Exemple de code R
+
+> **Astuce :** Pour éviter l’erreur « Typst does not allow more than one output from a code‑chunk », on supprime messages et avertissements.
+
+```r
+# code R
+mean(rnorm(100))
+```
+
+```{python}
+# code Python
+a = 2 + 4
+print(a)
+```
+

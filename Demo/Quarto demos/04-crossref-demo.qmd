@@ -1,0 +1,33 @@
+---
+title: "04-demo-references-croisees"
+format:
+  html:
+    embed-resources: true
+lang: fr
+---
+
+# Figures et tableaux
+
+Ci‑dessous, un histogramme (Figure @fig-hist) et un tableau récapitulatif (Tableau @tbl-sum). Survole les références pour un aperçu.
+
+```{r}
+#| label: fig-hist
+#| fig-cap: "Histogramme de la loi normale standard"
+hist(rnorm(1000))
+```
+
+```{r}
+#| label: tbl-sum
+#| tbl-cap: "Statistiques descriptives de données aléatoires"
+summary_df <- data.frame(
+  Statistique = c("Moyenne", "Écart-type"),
+  Valeur = c(mean(rnorm(1000)), sd(rnorm(1000)))
+)
+summary_df
+```
+
+On peut aussi référencer des équations, comme l’Équation @eq-lineaire :
+
+$$
+y = \beta_0 + \beta_1 x + \varepsilon
+$$ {#eq-lineaire}

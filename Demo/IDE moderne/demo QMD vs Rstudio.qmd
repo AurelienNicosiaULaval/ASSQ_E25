@@ -1,0 +1,15 @@
+---
+title: "demo QMD vs Rstudio"
+format: html
+---
+
+```{r}
+#| fig-height: 5
+#| fig-width: 5
+
+library(ggplot2)
+ggplot(mtcars, aes(x = mpg, y = wt)) +
+  geom_point() +
+  labs(title = "Scatterplot of MPG vs Weight")
+```
+

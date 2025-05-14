@@ -1,0 +1,46 @@
+---
+title: "01-demo-tableau-de-bord"
+format:
+  dashboard:
+    theme: minty
+    embed-resources: true
+lang: fr
+---
+
+## Ligne
+
+### Colonne {width=33%}
+
+```{r}
+#| content: valuebox
+#| title: "Nombre aléatoire"
+#| echo: false
+list(value = round(runif(1, 1, 100)), icon = "graph-up", color = "primary")
+```
+
+### Colonne {width=33%}
+
+```{r}
+#| content: valuebox
+#| title: "π"
+#| echo: false
+list(value = pi, icon = "calculator", color = "secondary")
+```
+
+### Colonne {width=33%}
+
+```{r}
+#| content: valuebox
+#| title: "Lettres"
+#| echo: false
+list(value = length(letters), icon = "alphabet", color = "warning")
+```
+
+## Ligne
+
+```{r}
+#| title: "Histogramme de données aléatoires"
+#| fig-width: 6
+#| fig-height: 4
+hist(rnorm(100), main = "Histogramme", col = "steelblue")
+```

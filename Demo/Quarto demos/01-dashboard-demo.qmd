@@ -1,0 +1,45 @@
+---
+title: "01-dashboard-demo"
+format:
+  dashboard:
+    theme: minty
+    embed-resources: true
+---
+
+## Row
+
+### Column {width=33%}
+
+```{r}
+#| content: valuebox
+#| title: "Random Number"
+#| echo: false
+list(value = round(runif(1, 1, 100)), icon = "graph-up", color = "primary")
+```
+
+### Column {width=33%}
+
+```{r}
+#| content: valuebox
+#| title: "π"
+#| echo: false
+list(value = pi, icon = "calculator", color = "secondary")
+```
+
+### Column {width=33%}
+
+```{r}
+#| content: valuebox
+#| title: "Letters"
+#| echo: false
+list(value = length(letters), icon = "alphabet", color = "warning")
+```
+
+## Row
+
+```{r}
+#| title: "Histogram of Random Data"
+#| fig-width: 6
+#| fig-height: 4
+hist(rnorm(100), main = "Histogram", col = "steelblue")
+```
