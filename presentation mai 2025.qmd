@@ -34,12 +34,13 @@ editor:
 
 ## Objectifs de la présentation
 
-1.  Vous offrir un **résumé clair et pratique** des avancées 
-    des deux dernières années en lien avec R.
+1.  Vous offrir un **résumé clair et pratique** des avancées des deux
+    dernières années en lien avec R.
 2.  Passer en revue les **outils récents** qui optimisent le workflow R
     en sciences des données.\
 3.  Les voir **en action** via des démos live.\
-4.  Vous fournir un **kit de ressources** (sur Github) pour aller plus loin.
+4.  Vous fournir un **kit de ressources** (sur Github) pour aller plus
+    loin.
 
 # Plan de la présentation
 
@@ -54,7 +55,8 @@ editor:
 -   💬 **Shiny + agents conversationnels**
 
 -   🎨 **Design**
-<!-- -   📈 **Modèles prédictifs : tidymodels & Orbital** -->
+    <!-- -   📈 **Modèles prédictifs : tidymodels & Orbital** -->
+
 -   ❓ **Conclusion & Q&R**
 
 # 🚀 IDEs modernes : Posit Desktop/Workbench, Posit Cloud & Positron
@@ -91,7 +93,8 @@ editor:
 -   **Versionnez** vos réglages (`.Rprofile`, `settings.json`).
 -   Activez **format‑on‑save** (*Air* ou *styler*).
 -   Utilisez **Project Templates** pour isoler les dépendances.
--   Relisez et tester toujours le code généré par l’IA avant de committer.
+-   Relisez et tester toujours le code généré par l’IA avant de
+    committer.
 
 # 📄 Quarto : nouveautés
 
@@ -110,8 +113,8 @@ editor:
 
 -   Plate‑forme polyvalente accélérant la production de contenus
     scientifiques.
--   Workflows plus fluides : moins de YAML, meilleures
-    prévisualisations (mode visual).
+-   Workflows plus fluides : moins de YAML, meilleures prévisualisations
+    (mode visual).
 -   Nouveaux formats (Dashboard, Manuscript), thèmes unifiés,
     intégration IA.
 
@@ -261,8 +264,7 @@ filtered <- penguins |> filter(bill_length_mm > 40) |> select(species, year)
     1.  Accélère les refactorisations répétitives.
     2.  Sert de mentor (« explique-moi ce bloc »).
     3.  Respecte le contexte : data frames chargés.
-    
-- On peut choisir entre différents modèles de LLM
+-   On peut choisir entre différents modèles de LLM
 
 ## Air : formateur de code ultra‑rapide
 
@@ -278,8 +280,8 @@ filtered <- penguins |> filter(bill_length_mm > 40) |> select(species, year)
 
 -   Package **ellmer** : fonctions `chat()`, `complete()`, supporte
     OpenAI/Anthropic/Ollama, stockage local des discussions.
--   Utilisé en coulisses par gander pour insérer des
-    réponses dans RStudio.
+-   Utilisé en coulisses par gander pour insérer des réponses dans
+    RStudio.
 
 ## Bonnes pratiques pour coder avec l’IA
 
@@ -313,8 +315,6 @@ filtered <- penguins |> filter(bill_length_mm > 40) |> select(species, year)
 -   [Shiny Assistant
     (Posit)](https://gallery.shinyapps.io/assistant/?_gl=1*yzykgf*_ga*MTUwMDg2NTIyNy4xNzQyMzI1ODc3*_ga_2C0WZ1JHG0*czE3NDcwNTU5MDkkbzEzJGcwJHQxNzQ3MDU1OTA5JGowJGwwJGgw)
 
-
-
 # Design moderne pour apps & rapports
 
 ## Pourquoi se soucier du design ?
@@ -325,156 +325,216 @@ filtered <- penguins |> filter(bill_length_mm > 40) |> select(species, year)
     public élargi.
 -   **Productivité** : composants réutilisables (cards, value_boxes)
     accélèrent le prototypage.
--   **Cohérence** : thèmes partagés entre Quarto, Shiny et
-    sites web.
+-   **Cohérence** : thèmes partagés entre Quarto, Shiny et sites web.
 
 ## bslib 0.7 : cartes, value_boxes, layout_sidebar
+
 -   **bslib** : package pour créer des thèmes Bootstrap 5 pour Shiny et
     Quarto.
 -   Nouvelle version (mars 2024) ajoute `card()`, `value_box()`,
     `layout_sidebar()` et refonte de `layout_columns()` → grilles
-    responsives sans CSS. 
+    responsives sans CSS.
 -   **Avantages** : prototypage rapide, cohérence visuelle.
 
-
 ## Shiny Ui Editor 
+
 -   **Shiny UI Editor** : éditeur visuel pour créer des applications
     Shiny sans écrire de code.
--   **Drag‑and‑drop** pour construire l’UI; génère
-    du code R \
+-   **Drag‑and‑drop** pour construire l’UI; génère du code R\
 -   Aperçu live, palette de composants {bslib}, export vers RStudio.
--   **Avantages** : democratise UX, facilite le developpement d'app auprès des non‑développeurs.
-
-
+-   **Avantages** : democratise UX, facilite le developpement d'app
+    auprès des non‑développeurs.
 
 ## esquisse : construire un ggplot sans coder
 
-- `{esquisse}` ouvre une **interface Shiny interactive** pour créer des graphiques `ggplot2`.  
-- Glissez vos variables dans X / Y / couleur / facette.  
-- Choisissez un type de graphique (`geom`) et personnalisez.  
-- Le **code R est généré automatiquement** et peut être copié/collé.
+-   `{esquisse}` ouvre une **interface Shiny interactive** pour créer
+    des graphiques `ggplot2`.\
+-   Glissez vos variables dans X / Y / couleur / facette.\
+-   Choisissez un type de graphique (`geom`) et personnalisez.\
+-   Le **code R est généré automatiquement** et peut être copié/collé.
 
-> Idéal pour la formation, le prototypage rapide ou explorer un jeu de données inconnu.
-
-
+> Idéal pour la formation, le prototypage rapide ou explorer un jeu de
+> données inconnu.
 
 <!-- # ModelOps : de l’entraînement à la production -->
 
 <!-- ## Pourquoi le ModelOps ? -->
 
 <!-- -   Passage du **notebook** au **service en production** est la partie -->
+
 <!--     la plus coûteuse du cycle ML. -->
+
 <!-- -   Nécessité de **traçabilité**, **réplicabilité**, **scalabilité** et -->
+
 <!--     **monitoring** continu. -->
+
 <!-- -   L’écosystème R autour de **tidymodels** comble le fossé entre -->
+
 <!--     data science et ops sans quitter R. -->
 
 <!-- ## tidymodels : fondation du cycle ML tidy -->
 
 <!-- -   Métapackage (recipes, parsnip, workflows, tune, yardstick…). -->
+
 <!-- -   Pipeline déclaratif : recette de pré‑traitement → spécification -->
+
 <!--     modèle → workflow complet. -->
+
 <!-- -   Avantages : -->
+
 <!--     1.  Syntaxe cohérente « tidyverse ». -->
+
 <!--     2.  Historique complet des étapes & hyperparamètres. -->
+
 <!--     3.  Intégration native aux briques ModelOps (vetiver, pins, -->
+
 <!--         orbital). -->
-
-
 
 <!-- ## vetiver : empaqueter, versionner, déployer -->
 
 <!-- -   Transforme un **workflow** en objet vetiver prêt à être servi via -->
+
 <!--     API Plumber/FastAPI. -->
+
 <!-- -   Utilise **pins** pour sauvegarde/version ; ajoute validation -->
+
 <!--     d’entrées & monitoring. -->
 
 <!-- ## Démo vetiver – publier une API -->
 
 <!-- 1.  `pak::pkg_install(c("vetiver", "pins"))` -->
+
 <!-- 2.   -->
 
 <!-- ``` r -->
+
 <!--    library(vetiver) -->
+
 <!--    board <- board_folder("models/") -->
+
 <!--    v <- vetiver_model(final_wf, "adult_rf_v1") -->
+
 <!--    vetiver_pin_write(board, v) -->
+
 <!--    vetiver_write_plumber(board, "adult_rf_v1")   # crée plumber.R -->
+
 <!-- ``` -->
 
 <!-- 3.  `plumber::pr_run("plumber.R", port = 8000)` ⇒ POST `/predict`. -->
+
 <!-- 4.  Appeler : -->
+
 <!--     `curl -X POST -H "Content-Type: application/json" -d '{"age":42,...}' http://localhost:8000/predict`. -->
 
 <!-- ## orbital : prédire directement en SQL -->
 
 <!-- -   Convertit un **workflow tidymodels** en requête SQL ou UDF -->
+
 <!--     Snowflake/Postgres/BigQuery. -->
+
 <!-- -   Supprime la latence liée aux extractions ; garde les données dans -->
+
 <!--     leur base. -->
 
 <!-- ## Démo orbital – export Snowflake -->
 
 <!-- 1.  `pak::pkg_install("orbital")` -->
+
 <!-- 2.   -->
 
 <!-- ``` r -->
+
 <!--    library(orbital) -->
+
 <!--    orb <- orbital(final_wf) -->
+
 <!--    sql_code <- orbital_as_sql(orb, table = "RAW.ADULT_DATA") -->
+
 <!--    writeLines(sql_code)            # coller dans l'IDE Snowflake -->
+
 <!-- ``` -->
 
 <!-- 3.  Dans Snowflake : -->
+
 <!--     `CREATE FUNCTION predict_income(...) RETURNS FLOAT AS $$ ... $$;` -->
+
 <!-- 4.  `SELECT id, predict_income(*) AS proba FROM RAW.ADULT_DATA LIMIT 10;` -->
 
 <!-- ## workflowsets : multiverse tuning -->
 
 <!-- -   Génère et compare **des dizaines de workflows** en un objet. -->
+
 <!-- -   `autoplot()` intégré pour visualiser performances & rangs. -->
 
 <!-- ## Démo workflowsets -->
 
 <!-- ``` r -->
+
 <!-- library(workflowsets) -->
+
 <!-- set <- workflow_set( -->
+
 <!--   preproc = list(basic = rec, spline = rec %>% step_ns(age, deg_free = 4)), -->
+
 <!--   models  = list(rf = mod, logit = logistic_reg() %>% set_engine("glm")) -->
+
 <!-- ) -->
+
 <!-- fit_set <- workflow_map(set, "tune_grid", resamples = vfold_cv(train, v = 3)) -->
+
 <!-- autoplot(fit_set) -->
+
 <!-- ``` -->
 
 <!-- ## pins : versionner tous vos artefacts -->
 
 <!-- -   Sauvegarde objets sur **boards** (local, S3, GCS, Posit Connect) ; -->
+
 <!--     versioning activé. -->
+
 <!-- -   Se combine à vetiver pour historiser *chaque* build. -->
 
 <!-- ## Démo pins -->
 
 <!-- ``` r -->
+
 <!-- library(pins) -->
+
 <!-- board <- board_folder("boards/") -->
+
 <!-- board %>% pin_write(final_wf, "adult_rf", type = "rds") -->
+
 <!-- board %>% pin_versions("adult_rf") -->
+
 <!-- ``` -->
 
 <!-- ## Conclusion • Bonnes pratiques ModelOps -->
 
 <!-- -   **CI/CD** : GitHub Actions + `renv` pour des builds reproductibles. -->
+
 <!-- -   **Tests** : `testthat` + tests d’intégration prédictive. -->
+
 <!-- -   **Monitoring** : vetiver fournit des métriques de drift; exposez‑les -->
+
 <!--     via Prometheus/Grafana. -->
+
 <!-- -   **Gouvernance** : pins et orbital conservent l’historique + contexte -->
+
 <!--     directement dans le datawarehouse. -->
 
 # Conclusion & Q&R
 
--   **Récapitulatif** des outils et bénéfices.\
 -   **Invitation** à tester et partager vos retours.
 -   Vous retrouverez la présentation et le code des exemples sur Github:
+
+```{r echo=FALSE}
+library(qrcode)
+
+qr <- qr_code("https://github.com/AurelienNicosiaULaval/ASSQ_E25")
+plot(qr)
+```
+
+-   <https://github.com/AurelienNicosiaULaval/ASSQ_E25>
 -   **Questions ?**
 
 # Liens & Références
