@@ -214,55 +214,56 @@ Aurélien Nicosia
 <section id="qui-suisje" class="slide level2">
 <h2>Qui suis‑je&nbsp;?</h2>
 <ul>
-<li><p>Chargé d’enseignement en <strong>statistique &amp; science des données</strong> à l’Université Laval.</p></li>
+<li><p>Chargé d’enseignement en <strong>statistique &amp; science des données</strong> à l’Université  Laval.</p></li>
 <li><p>Passionné de sciences des données!</p></li>
+<li><p>Très grand fan de R !</p></li>
 </ul>
 </section>
 <section id="contexte" class="slide level2">
 <h2>Contexte</h2>
 <ul>
-<li><strong>Passionné par l’écosystème R</strong>, je suis en permanence les annonces sur LinkedIn, Posit Blog et R-Bloggers.<br>
+<li><strong>Passionné par l’écosystème R</strong>, je suis les annonces sur LinkedIn, Posit Blog et R-Bloggers.<br>
 </li>
 <li>À chaque nouveauté, je l’ajoute à ma <em>todo</em> « à tester »… mais, faute de temps, la liste s’allonge !<br>
 </li>
 <li>Pour cette présentation, j’ai enfin passé ces outils en revue, pris le temps de les essayer et d’en extraire <strong>l’essentiel</strong>.</li>
+<li>Je ne suis pas un expert, juste un testeur qui a pris le temps de découvrir ces outils et je vous les partage.</li>
 </ul>
 </section>
 <section id="objectifs-de-la-présentation" class="slide level2">
 <h2>Objectifs de la présentation</h2>
 <ol type="1">
-<li>Vous offrir un <strong>résumé clair et pratique</strong> des avancées des deux dernières années en lien avec R.</li>
-<li>Passer en revue les <strong>outils récents</strong> qui optimisent le workflow&nbsp;R en sciences des données.<br>
-</li>
-<li>Les voir <strong>en action</strong> via des démos live.<br>
-</li>
+<li>Vous offrir un <strong>résumé clair et pratique</strong> de mes découvertes en lien avec R et les outils en sciences des données.</li>
+<li>Passer en revue les <strong>outils récents</strong> qui optimisent le workflow&nbsp;R en sciences des données.</li>
+<li>Les voir <strong>en action</strong> via des démos.</li>
 <li>Vous fournir un <strong>kit de ressources</strong> (sur Github) pour aller plus loin.</li>
 </ol>
+<p>Vous avoir semez une graine lorsque vous en aurez besoin!</p>
 </section></section>
 <section id="plan-de-la-présentation" class="title-slide slide level1 center">
 <h1>Plan de la présentation</h1>
 <ul>
 <li><p>🚀 <strong>IDE: Posit, Posit Cloud et Positron</strong></p></li>
-<li><p>📄 <strong>Quarto : reproducibilité</strong></p></li>
+<li><p>📄 <strong>Quarto : nouveautés</strong></p></li>
 <li><p>&nbsp;🅁&nbsp;<strong>Base&nbsp;R&nbsp;: nouveautés</strong></p></li>
 <li><p>🤖 <strong>IA &amp; productivité de code</strong></p></li>
 <li><p>💬 <strong>Shiny + agents conversationnels</strong></p></li>
-<li><p>🎨 <strong>Design</strong> <!-- -   📈 **Modèles prédictifs : tidymodels & Orbital** --></p></li>
+<li><p>🎨 <strong>Design modernes pour apps et rapports</strong> <!-- -   📈 **Modèles prédictifs : tidymodels & Orbital** --></p></li>
 <li><p>❓ <strong>Conclusion &amp; Q&amp;R</strong></p></li>
 </ul>
 </section>
 
 <section>
-<section id="ides-modernes-posit-desktopworkbench-posit-cloud-positron" class="title-slide slide level1 center">
-<h1>🚀 IDEs modernes&nbsp;: Posit&nbsp;Desktop/Workbench, Posit&nbsp;Cloud &amp;&nbsp;Positron</h1>
+<section id="ides-modernes-posit-desktop-posit-cloud-positron" class="title-slide slide level1 center">
+<h1>🚀 IDEs modernes&nbsp;: Posit&nbsp;Desktop, Posit&nbsp;Cloud &amp;&nbsp;Positron</h1>
 
 </section>
 <section id="pourquoi-un-bon-ide" class="slide level2">
-<h2>Pourquoi un bon IDE ?</h2>
+<h2>Pourquoi un bon  IDE ?</h2>
 <ul>
 <li><strong>Expérience unifiée</strong>&nbsp;: code, exécution, visualisation dans la même fenêtre.</li>
 <li><strong>Assistance IA</strong>&nbsp;: Copilot, Shiny Assistant.</li>
-<li><strong>DevOps prêt‑à‑l’emploi</strong>&nbsp;: Git, publication Quarto/Shiny&nbsp;→&nbsp;Posit Connect &amp; Cloud.</li>
+<li><strong>DevOps prêt‑à‑l’emploi</strong>&nbsp;: Git, publication Quarto/Shiny&nbsp;→&nbsp;Posit Connect &amp;  Cloud.</li>
 <li><strong>Collaboration</strong>&nbsp;: Posit&nbsp;Cloud pour l’enseignement, Positron pour projets multi‑langages.</li>
 </ul>
 </section>
@@ -278,7 +279,7 @@ Aurélien Nicosia
 <h2>Posit&nbsp;Cloud&nbsp;: RStudio dans le navigateur</h2>
 <ul>
 <li><strong>Templates</strong> prêts à l’emploi (tidyverse, Shiny, Quarto).</li>
-<li><strong>Copilot in‑browser</strong>&nbsp;(depuis déc 2023).</li>
+<li><strong>Copilot in‑browser</strong>&nbsp;(depuis déc  2023).</li>
 <li>Mises à jour R &amp; drivers automatiques, bouton <em>Publish</em>&nbsp;→&nbsp;Posit Connect&nbsp;Cloud.</li>
 </ul>
 </section>
@@ -287,29 +288,31 @@ Aurélien Nicosia
 <ul>
 <li>Projets <strong>R, Python, Julia, SQL, Bash</strong> dans un même workspace.</li>
 </ul>
-</section>
-<section id="bonnes-pratiques-ide" class="slide level2">
-<h2>Bonnes pratiques IDE</h2>
-<ul>
-<li><strong>Versionnez</strong> vos réglages&nbsp;(<code>.Rprofile</code>, <code>settings.json</code>).</li>
-<li>Activez <strong>format‑on‑save</strong> (<em>Air</em> ou <em>styler</em>).</li>
-<li>Utilisez <strong>Project Templates</strong> pour isoler les dépendances.</li>
-<li>Relisez et tester toujours le code généré par l’IA avant de committer.</li>
-</ul>
-</section></section>
+
+<img data-src="image/astropy.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
 <section id="quarto-nouveautés" class="title-slide slide level1 center">
 <h1>📄 Quarto&nbsp;: nouveautés</h1>
 
 </section>
-<section id="questce-que-quarto" class="slide level2">
-<h2>Qu’est‑ce que Quarto ?</h2>
+<section id="de-r-markdown-à-quarto" class="slide level2">
+<h2>De R Markdown à Quarto</h2>
+<div style="display: flex; align-items: center; gap: 2em;">
+<div style="flex: 7;">
 <ul>
-<li><strong>Quarto</strong> est un système de publication open‑source pour le langage R, Python et Julia.</li>
-<li><strong>Successeur moderne de R&nbsp;Markdown</strong>&nbsp;: chunks ``<code>{}</code> similaires et YAML cohérent.</li>
-<li><strong>Polyglotte</strong>&nbsp;: R, Python, Julia, Observable — un document, plusieurs kernels.</li>
+<li><strong>Quarto</strong> est un système de publication open‑source pour le langage R, Python et Julia.<br>
+</li>
+<li><strong>Successeur moderne de R Markdown</strong>&nbsp;: chunks <code>{}</code> similaires et YAML cohérent.<br>
+</li>
+<li><strong>Polyglotte</strong>&nbsp;: R, Python, Julia — un document, plusieurs kernels.<br>
+</li>
 <li>Export <strong>multi‑format</strong>&nbsp;: HTML, PDF, Word, RevealJS, Beamer, Dashboards, livres, sites.</li>
 </ul>
+</div>
+<div style="flex: 3;">
+<p><img src="image/rmd vs qmd.png" alt="Comparaison RMD vs QMD" style="max-width: 100%; border-radius: 12px;"></p>
+</div>
+</div>
 </section>
 <section id="pourquoi-suivre-quarto-de-près" class="slide level2">
 <h2>Pourquoi suivre Quarto de près ?</h2>
@@ -325,8 +328,10 @@ Aurélien Nicosia
 <li>Nouveau format <strong>dashboard</strong> basé sur <code>grid-page</code>&nbsp;: rows, columns, value‑boxes, cards.</li>
 <li>Compatible Shiny et HTML widgets.</li>
 <li>YAML minimal&nbsp;:<code>format: dashboard   theme: minty</code>.</li>
+<li>Code en ligne pour tous les langages:</li>
 </ul>
-</section>
+
+<img data-src="image/1617740277.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="moteur-typst-v1.5" class="slide level2">
 <h2>Moteur Typst&nbsp;(v1.5)</h2>
 <ul>
@@ -345,8 +350,8 @@ Aurélien Nicosia
 <section id="crossreferences-shortcode" class="slide level2">
 <h2>Cross‑References &amp; shortcode</h2>
 <ul>
-<li>Auto‑numérotation des tableaux/figures → <code>@tbl-…</code>.</li>
-<li>Shortcode <code>1.7.28</code> injecte la version Quarto utilisée.</li>
+<li><p>Auto‑numérotation des tableaux/figures → <code>@tbl-…</code>.à</p></li>
+<li><p>On peut voir le visuel en passant la souris dessus.</p></li>
 </ul>
 </section>
 <section id="nouveautés-quarto-1.7-avril-2025" class="slide level2">
@@ -356,14 +361,11 @@ Aurélien Nicosia
 </li>
 <li><code>respect-user-color-scheme: true</code> : bascule automatique clair/sombre selon les préférences du navigateur.</li>
 </ul>
-<blockquote>
-<p>⚠️ Une preview 1.8 existe mais l’équipe prévient d’une <strong>instabilité temporaire</strong> ; attendez la stable avant d’upgrader.</p>
-</blockquote>
 </section>
 <section id="conclusion-bonnes-pratiques-quarto" class="slide level2">
 <h2>Conclusion – bonnes pratiques Quarto</h2>
 <ul>
-<li>*<strong>Utilise</strong> des Quarto Projects.</li>
+<li><strong>Utilise</strong> des projects quarto (comme des projet Rstudio).</li>
 <li>Documente le YAML&nbsp;: commentaires.</li>
 <li>Active <code>embed-resources: true</code> pour le partage offline.</li>
 </ul>
@@ -378,7 +380,7 @@ Aurélien Nicosia
 <ul>
 <li><strong>Corrections de bugs &amp; sécurité</strong> : vulnérabilités corrigées rapidement.</li>
 <li><strong>Performance</strong> : téléchargement parallèle (<code>install.packages</code>) dès 4.5.</li>
-<li><strong>Ergonomie</strong> : pipe <code>|&gt;</code> complet, <code>use()</code> pour imports ciblés, nouvelles fonctions utilitaires.</li>
+<li><strong>Ergonomie</strong> : pipe <code>|&gt;</code> complet, <code>use()</code> pour imports ciblés.</li>
 <li><strong>Compatibilité</strong> : packages récents exigent souvent ≥ 4.3.</li>
 </ul>
 </section>
@@ -390,9 +392,9 @@ ou <code>library(magrittr)</code>.</li>
 <li><code>|&gt;</code> est intégré à <strong>base R ≥ 4.1</strong> : zéro dépendance, un soupçon plus rapide.</li>
 <li>Passer l’objet ailleurs qu’au <strong>premier argument</strong> :
 <ul>
-<li><code>%&gt;%</code> → placeholder <code>.</code><br>
+<li><code>%&gt;%</code> → remplacement <code>.</code><br>
 </li>
-<li><code>|&gt;</code> → identifiant <code>_</code> (R 4.3+).</li>
+<li><code>|&gt;</code> → remplacement <code>_</code> (R 4.3+).</li>
 </ul></li>
 </ul>
 </section>
@@ -431,10 +433,12 @@ ou <code>library(magrittr)</code>.</li>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># stricte longueur‑1</span></span>
 <span id="cb5-2"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb5-3"><a href=""></a><span class="co"># x &amp;&amp; TRUE  # ← génère erreur depuis R&nbsp;4.3</span></span>
-<span id="cb5-4"><a href=""></a></span>
-<span id="cb5-5"><a href=""></a><span class="co"># pipe avec _</span></span>
-<span id="cb5-6"><a href=""></a>mtcars <span class="sc">|&gt;</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> disp, <span class="at">data =</span> _) <span class="sc">|&gt;</span> _<span class="sc">$</span>coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a href=""></a> x <span class="sc">&amp;&amp;</span> <span class="cn">TRUE</span>  <span class="co"># ← génère erreur depuis R&nbsp;4.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in x &amp;&amp; TRUE: 'length = 2' in coercion to 'logical(1)'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="co"># pipe avec _</span></span>
+<span id="cb7-2"><a href=""></a>mtcars <span class="sc">|&gt;</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> disp, <span class="at">data =</span> _) <span class="sc">|&gt;</span> _<span class="sc">$</span>coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept)        disp 
 29.59985476 -0.04121512 </code></pre>
@@ -452,15 +456,18 @@ ou <code>library(magrittr)</code>.</li>
 <section id="démo-rapide-1" class="slide level2">
 <h2>Démo rapide</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>penguins <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
-<span id="cb7-2"><a href=""></a><span class="fu">use</span>(<span class="st">"dplyr"</span>, <span class="fu">c</span>(<span class="st">"filter"</span>, <span class="st">"select"</span>))</span>
-<span id="cb7-3"><a href=""></a>filtered <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> <span class="fu">filter</span>(bill_length_mm <span class="sc">&gt;</span> <span class="dv">40</span>) <span class="sc">|&gt;</span> <span class="fu">select</span>(species, year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">data</span>(<span class="st">"penguins"</span>)</span>
+<span id="cb9-2"><a href=""></a>penguins <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
+<span id="cb9-3"><a href=""></a><span class="fu">use</span>(<span class="st">"dplyr"</span>, <span class="fu">c</span>(<span class="st">"filter"</span>, <span class="st">"select"</span>))</span>
+<span id="cb9-4"><a href=""></a>filtered <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> </span>
+<span id="cb9-5"><a href=""></a>  <span class="fu">filter</span>(bill_length_mm <span class="sc">&gt;</span> <span class="dv">40</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb9-6"><a href=""></a>  <span class="fu">select</span>(species, year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="roadmap-bonnes-pratiques" class="slide level2">
 <h2>Roadmap &amp; bonnes pratiques</h2>
 <ul>
-<li>Surveillez <strong>r‑devel NEWS</strong> pour tester les nouveautés.</li>
+<li>Surveillez les mise à jour de R pour tester les nouveautés.</li>
 <li><strong>Mettez à jour</strong> R régulièrement (4.3+).</li>
 <li>Utilisez <code>pak::pkg_install()</code> (encore plus rapide mais base R se rapproche&nbsp;!).</li>
 </ul>
@@ -471,11 +478,11 @@ ou <code>library(magrittr)</code>.</li>
 
 </section>
 <section id="pourquoi-des-copilotes-ia-autoformatteurs" class="slide level2">
-<h2>Pourquoi des copilotes IA &amp; auto‑formatteurs ?</h2>
+<h2>Pourquoi des copilotes  IA &amp; auto‑formatteurs ?</h2>
 <ul>
 <li><strong>Gains de temps</strong> : génération de code, refactorisations massives en un clic.</li>
 <li><strong>Montée en compétences</strong> : explications contextuelles.</li>
-<li><strong>Standardisation</strong> : style uniforme (Air) → diff Git propres, relectures focalisées sur la logique.</li>
+<li><strong>Standardisation</strong> : style uniforme (Air) → commit/push Git propres, relectures focalisées sur la logique et pas sur le style.</li>
 <li><strong>Réduction des erreurs</strong></li>
 <li><strong>Pédagogie</strong> : outil d’apprentissage actif pour les étudiants comme pour les équipes.</li>
 </ul>
@@ -483,6 +490,7 @@ ou <code>library(magrittr)</code>.</li>
 <section id="gander-le-copilote-contextuel-pour-r" class="slide level2">
 <h2>gander&nbsp;: le copilote contextuel pour R</h2>
 <ul>
+<li>En avez-vous assez de copier-coller entre ChatGPT et RStudio ?</li>
 <li><strong>Add‑in RStudio</strong> qui dialogue avec un LLM et <em>réécrit directement</em> la sélection courante&nbsp;: traduction base R → tidyverse, vectorisation, documentation, etc.</li>
 <li>Se base sur <strong>ellmer</strong> + <code>rstudioapi</code> : aucune copie‑colle manuelle&nbsp;; le code retourné remplace immédiatement l’ancien.</li>
 <li>Avantages&nbsp;:
@@ -491,13 +499,13 @@ ou <code>library(magrittr)</code>.</li>
 <li>Sert de mentor (« explique-moi ce bloc »).</li>
 <li>Respecte le contexte&nbsp;: data frames chargés.</li>
 </ol></li>
-<li>On peut choisir entre différents modèles de LLM</li>
+<li>On peut choisir entre différents modèles de LLM (API ou local: ollama)</li>
 </ul>
 </section>
 <section id="air-formateur-de-code-ultrarapide" class="slide level2">
 <h2>Air&nbsp;: formateur de code ultra‑rapide</h2>
 <ul>
-<li><strong>Air</strong> applique le <em>Tidyverse style guide</em> en une fraction de seconde </li>
+<li><strong>Air</strong> applique le guide de style <em>Tidyverse</em> en une fraction de seconde </li>
 <li>Avantages&nbsp;:
 <ul>
 <li>Style cohérent.</li>
@@ -520,12 +528,12 @@ ou <code>library(magrittr)</code>.</li>
 <li><strong>Tester systématiquement</strong> </li>
 <li><strong>Versionner &amp; formater</strong> : Git + Air pour du code propre.</li>
 <li><strong>Documenter les prompts</strong> : garder une trace dans le repo ou dans ellmer.</li>
-<li><strong>Respect des données</strong> : ne pas envoyer d’info sensible ou propriétaire; vérifier licences et RGPD.</li>
+<li><strong>Respect des données</strong> : ne pas envoyer d’info sensible.</li>
 </ul>
 </section></section>
 <section>
 <section id="shiny-agents-conversationnels" class="title-slide slide level1 center">
-<h1>Shiny&nbsp;+ agents conversationnels</h1>
+<h1>Shiny&nbsp;+ agents  conversationnels</h1>
 
 </section>
 <section id="questce-quune-application-shiny" class="slide level2">
@@ -534,7 +542,12 @@ ou <code>library(magrittr)</code>.</li>
 <li><strong>Framework Web pour R (et maintenant Python)</strong> : créez une appli interactive <em>sans</em> écrire de HTML/JS.<br>
 </li>
 <li>Architecture <strong>UI + Server réactif</strong> : les widgets déclenchent un recalcul côté R, l’interface se met à jour instantanément.<br>
-</li>
+<img data-src="image/3-blank%20(1).png" width="500"></li>
+</ul>
+</section>
+<section id="questce-quune-application-shiny-1" class="slide level2">
+<h2>Qu’est‑ce qu’une application&nbsp;Shiny ?</h2>
+<ul>
 <li><strong>Déploiement flexible</strong> : local, <em>shinyapps.io</em>, Posit&nbsp;Connect ou <strong>Shinylive</strong> (tout tourne dans le navigateur).<br>
 </li>
 <li>Cas d’usage : dashboards exploratoires, démonstrateurs de modèles, outils pédagogiques, prototypes de produits.</li>
@@ -545,7 +558,7 @@ ou <code>library(magrittr)</code>.</li>
 <ul>
 <li><p>Explosion des assistants de codage (Shiny Assistant, <strong>gander</strong>) qui génèrent du <em>code UI + server</em> en quelques secondes<br>
 </p></li>
-<li><p><a href="https://gallery.shinyapps.io/assistant/?_gl=1*yzykgf*_ga*MTUwMDg2NTIyNy4xNzQyMzI1ODc3*_ga_2C0WZ1JHG0*czE3NDcwNTU5MDkkbzEzJGcwJHQxNzQ3MDU1OTA5JGowJGwwJGgw">Shiny Assistant (Posit)</a></p></li>
+<li><p><a href="https://gallery.shinyapps.io/assistant/?_gl=1*yzykgf*_ga*MTUwMDg2NTIyNy4xNzQyMzI1ODc3*_ga_2C0WZ1JHG0*czE3NDcwNTU5MDkkbzEzJGcwJHQxNzQ3MDU1OTA5JGowJGwwJGgw">Shiny  Assistant (Posit)</a></p></li>
 </ul>
 </section></section>
 <section>
@@ -564,6 +577,8 @@ ou <code>library(magrittr)</code>.</li>
 </section>
 <section id="bslib-0.7-cartes-value_boxes-layout_sidebar" class="slide level2">
 <h2>bslib&nbsp;0.7&nbsp;: cartes, value_boxes, layout_sidebar</h2>
+<p>Les shiny app avant<br>
+<img data-src="images/clipboard-805153355.png" width="500"></p>
 <ul>
 <li><strong>bslib</strong>&nbsp;: package pour créer des thèmes Bootstrap 5 pour Shiny et Quarto.</li>
 <li>Nouvelle version (mars&nbsp;2024) ajoute <code>card()</code>, <code>value_box()</code>, <code>layout_sidebar()</code> et refonte de <code>layout_columns()</code>&nbsp;→ grilles responsives sans CSS.</li>

@@ -6,7 +6,6 @@ data("mtcars")
 
 
 
-
 # code brouillon
 
 mtcars%>%ggplot(aes(x=mpg,y=disp)) +

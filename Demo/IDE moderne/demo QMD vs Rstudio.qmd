@@ -1,15 +1,92 @@
 ---
-title: "demo QMD vs Rstudio"
-format: html
+title: "Démo : Quarto et RStudio"
+author: "Aurélien Nicosia"
+date: today
+format: 
+  html:
+    embed-resources: true
+    toc: true
+    code-fold: true
+    fig-align: center
+execute: 
+  echo: true
+  warning: false
+  message: false
+lang: fr
 ---
 
-```{r}
-#| fig-height: 5
-#| fig-width: 5
+# 🚀 Introduction
 
+Voici une démonstration simple mais parlante des fonctionnalités offertes par **Quarto** dans **RStudio**.\
+On y verra :
+
+-   Intégration de **graphiques R**,
+-   Génération automatique de **tables**,
+-   Polyglossie : inclusion de **code Python**,
+-   Exportation **HTML autoportant**,
+-   Pliage du code (`code-fold: true`).
+
+------------------------------------------------------------------------
+
+# 📊 Visualisation avec ggplot2
+
+```{r}
 library(ggplot2)
-ggplot(mtcars, aes(x = mpg, y = wt)) +
-  geom_point() +
-  labs(title = "Scatterplot of MPG vs Weight")
+library(dplyr)
+
+mtcars %>%
+  ggplot(aes(x = mpg, y = wt, color = factor(cyl))) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+    title = "Scatterplot: MPG vs Weight",
+    subtitle = "Coloré selon le nombre de cylindres",
+    x = "Miles per gallon",
+    y = "Poids (1000 lbs)",
+    color = "Cylindres"
+  ) +
+  theme_minimal()
 ```
 
+------------------------------------------------------------------------
+
+# 📋 Résumé statistique avec `dplyr`
+
+```{r}
+mtcars %>%
+  group_by(cyl) %>%
+  summarise(
+    mpg_moy = mean(mpg),
+    poids_moy = mean(wt),
+    .groups = "drop"
+  )
+```
+
+------------------------------------------------------------------------
+
+# 🐍 Intégration Python
+
+```{python}
+import numpy as np
+import pandas as pd
+
+x = np.linspace(0, 2*np.pi, 50)
+y = np.sin(x)
+
+pd.DataFrame({'x': x, 'sin(x)': y}).head()
+```
+
+------------------------------------------------------------------------
+
+# ✅ Ce qu’on a démontré
+
+-   ✅ **Exécution de code R et Python dans le même document**
+-   ✅ **Affichage clair et esthétique des graphiques**
+-   ✅ **Export HTML sans dépendances externes**
+-   ✅ **Fonctionnalités avancées de Quarto (code folding, fig-align, etc.)**
+
+------------------------------------------------------------------------
+
+# 🔗 Pour aller plus loin
+
+-   [Documentation Quarto](https://quarto.org)
+-   [Exemples interactifs](https://quarto.org/docs/gallery/)

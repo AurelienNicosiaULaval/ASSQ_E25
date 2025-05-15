@@ -43,14 +43,16 @@ text(summary_tbl$Sepal.Length, summary_tbl$Sepal.Width,
 
 
 
+## autre exemple de gander
 
 
 
+library(ggplot2)
+
+data("stackoverflow", package = "modeldata")
 
 
-
-
-
+stackoverflow
 
 
 # messy.R – exemple de script truffé de mauvaises pratiques ----
