@@ -166,7 +166,7 @@ Vous avoir semez une graine lorsque vous en aurez besoin!
 -   Documente le YAML : commentaires.
 -   Active `embed-resources: true` pour le partage offline.
 
-# Base R : nouveautés
+#  🅁 Base R : nouveautés
 
 ## Pourquoi mettre à jour R ?
 
@@ -251,7 +251,7 @@ filtered <- penguins |>
 -   Utilisez `pak::pkg_install()` (encore plus rapide mais base R se
     rapproche !).
 
-# IA & productivité du code
+# 🤖 IA & productivité du code
 
 ## Pourquoi des copilotes  IA & auto‑formatteurs ?
 
@@ -306,7 +306,7 @@ filtered <- penguins |>
     ellmer.
 -   **Respect des données** : ne pas envoyer d’info sensible.
 
-# Shiny + agents  conversationnels
+# 💬 Shiny + agents  conversationnels
 
 ## Qu’est‑ce qu’une application Shiny ?
 
@@ -331,7 +331,7 @@ filtered <- penguins |>
 -   [Shiny  Assistant
     (Posit)](https://gallery.shinyapps.io/assistant/?_gl=1*yzykgf*_ga*MTUwMDg2NTIyNy4xNzQyMzI1ODc3*_ga_2C0WZ1JHG0*czE3NDcwNTU5MDkkbzEzJGcwJHQxNzQ3MDU1OTA5JGowJGwwJGgw)
 
-# Design moderne pour apps & rapports
+# 🎨 Design moderne pour apps & rapports
 
 ## Pourquoi se soucier du design ?
 
